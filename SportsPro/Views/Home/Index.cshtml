@@ -1,0 +1,30 @@
+﻿@{
+	ViewData["Title"] = "Sports Pro";
+	Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Home Page</title>
+</head>
+<body style="background: #e5e5e5">
+    <div class="container container-fluid">
+        <h1 class="pt-4">SportsPro Technical Support</h1>
+        <span class="text-muted">Sports management software for the sports enthusiast</span>
+        <h2 class="pt-4">Admin</h2>
+        <div class="list-group">
+            <a asp-controller="Products" asp-action="Index" class="list-group-item list-group-item-action border-top border-2 border-dark" style="background: #fca311">Manage Products</a>
+            <a asp-controller="Technicians" asp-action="Index" class="list-group-item list-group-item-action border-top border-dark" style="background: #fca311">Manage Technicians</a>
+            <a asp-controller="Customers" asp-action="Index" class="list-group-item list-group-item-action border-top border-dark" style="background: #fca311">Manage Customers</a>
+            <a asp-controller="Incidents" asp-action="Index" class="list-group-item list-group-item-action border-top border-dark" style="background: #fca311">Manage Incidents</a>
+            <a asp-controller="Registration" asp-action="List" class="list-group-item list-group-item-action border-top border-bottom border-2 border-dark" style="background: #fca311">Manage Registrations</a>
+        </div>
+        <h2 class="pt-4">Technicians</h2>
+        <div class="list-group">
+            <a asp-controller="TechIncident" asp-action="List" class="list-group-item list-group-item-action border-top border-bottom border-2 border-dark" style="background: #fca311">Update Incidents</a>
+        </div>
+    </div>
+</body>
+</html>

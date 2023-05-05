@@ -1,0 +1,59 @@
+﻿@model IncidentViewModel
+
+@{
+	string title = Model.Action + " Incident";
+	ViewData["Title"] = title;
+	Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<form asp-action="Edit" method="post">
+	<div asp-validation-summary="All" class="text-danger"></div>
+	
+	<div class="mb-3">
+		<label asp-for="Incident.CustomerID" class="form-label">Customer</label>
+		<select asp-for="Incident.CustomerID" asp-items="@(new SelectList(Model.Customers, "CustomerID", "FirstName"))" class="form-select">
+			<option value="">Select a Customer...</option>
+		</select>
+	</div>
+
+	<div class="mb-3">
+		<label asp-for="Incident.ProductId" class="form-label">Product</label>
+		<select asp-for="Incident.ProductId" asp-items="@(new SelectList(Model.Products, "ProductId", "Name"))" class="form-select">
+			<option value="">Select a Product...</option>
+		</select>
+	</div>
+
+	<div class="mb-3">
+		<label asp-for="Incident.Title" class="form-label">Title</label>
+		<input asp-for="Incident.Title" class="form-control" />
+	</div>
+
+	<div class="mb-3">
+		<label asp-for="Incident.Description" class="form-label">Description</label>
+		<textarea asp-for="Incident.Description" class="form-control"></textarea>
+	</div>
+
+	<div class="mb-3">
+		<label asp-for="Incident.TechnicianId" class="form-label">Technician</label>
+		<select asp-for="Incident.TechnicianId" asp-items="@(new SelectList(Model.Technicians, "TechnicianId", "Name"))" class="form-select">
+			<option value="">Select a Technician...</option>
+		</select>
+	</div>
+
+	<div class="mb-3">
+		<label asp-for="Incident.DateOpened" class="form-label">Date Opened</label>
+		<input asp-for="Incident.DateOpened" class="form-control" />
+	</div>
+
+	<div class="mb-3">
+		<label asp-for="Incident.DateClosed" class="form-label">Date Closed</label>
+		<input asp-for="Incident.DateClosed" class="form-control" />
+	</div>
+
+
+	<input type="hidden" asp-for="Incident.IncidentId" />
+	<button type="submit" class="btn btn-primary">Save</button>
+	<a asp-controller="Incidents" asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

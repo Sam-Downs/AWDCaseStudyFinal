@@ -1,0 +1,51 @@
+﻿@model RegistrationViewModel
+@{
+    ViewData["Title"] = "Registrations";
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <h2 class="mt-4">@Model.Customer.FullName Registrations</h2>
+
+    @if (!string.IsNullOrEmpty(ViewData["message"] as string))
+    {
+        <div class="alert alert-info mt-2">@ViewData["message"]</div>
+    }
+
+    @if (Model.Customer.Products.Count == 0)
+    {
+        <p>No products registered for this customer.</p>
+    }
+    else
+    {
+        <table class="table mt-4">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var products in Model.Customer.Products)
+                {
+                    <tr>
+                        <td>@products.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <h3 class="mt-4">Register a Product</h3>
+    <form asp-action="Index" method="post" class="mt-2">
+        <input type="hidden" asp-for="Customer.CustomerID" name="CustomerID" />
+        <div class="form-group">
+            <label asp-for="Product.ProductId">Product</label>
+            <select asp-for="Product.ProductId" asp-items="@(new SelectList(Model.Products, "ProductId", "Name"))" class="form-control">
+                <option value="0">-- Select a product --</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Register</button>
+        <a asp-controller="Registration" asp-action="GetCustomer" class="btn btn-secondary mt-2">Cancel</a>
+    </form>
+
+</div>

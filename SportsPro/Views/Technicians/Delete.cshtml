@@ -1,0 +1,26 @@
+﻿@model Technician
+@{
+	ViewData["Title"] = "Delete a Technician";
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h2 class="mb-0">Confirm Deletion</h2>
+                </div>
+                <div class="card-body">
+                    <h3>@Model.Name</h3>
+                    <form asp-action="Delete" method="post">
+                        <input type="hidden" asp-for="TechnicianId" />
+
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <a asp-controller="Technicians" asp-action="Index" class="btn btn-secondary">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@model Technician
+@{
+	string title = ViewBag.Action + " Technician";
+	ViewData["Title"] = title;
+	Layout = "_Layout";
+}
+
+<div class="container">
+    <div class="row mt-4">
+        <!-- Added margin top -->
+        <div class="col-md-10 col-lg-8 mx-auto">
+            <h2 class="text-center mb-4">@ViewBag.Title</h2> <!-- Centered the title and added some margin bottom -->
+
+            <form asp-action="Edit" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label">Name</label>
+                    <input asp-for="Name" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input asp-for="Email" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="PhoneNumber" class="form-label">Phone Number</label>
+                    <input asp-for="PhoneNumber" class="form-control" />
+                </div>
+
+                <input type="hidden" asp-for="TechnicianId" />
+                <div class="d-flex justify-content-center mb-3">
+                    <!-- Added flexbox for centering and margin bottom -->
+                    <button type="submit" class="btn btn-primary me-2">Save</button>
+                    <a asp-controller="Technicians" asp-action="Index" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,109 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SportsPro
+build_property.RootNamespace = SportsPro
+build_property.ProjectDir = C:\Users\thesa\Desktop\AWDCaseStudyFinal\SportsPro\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\thesa\Desktop\AWDCaseStudyFinal\SportsPro
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/About/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Customers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Customers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Customers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Incidents/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbnRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Incidents/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Incidents/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Products/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Products/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Products/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Registration/GetCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXEdldEN1c3RvbWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Registration/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/TechIncident/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaEluY2lkZW50XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/TechIncident/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaEluY2lkZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/TechIncident/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaEluY2lkZW50XExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Technicians/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaG5pY2lhbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Technicians/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaG5pY2lhbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/Technicians/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaG5pY2lhbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thesa/Desktop/AWDCaseStudyFinal/SportsPro/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

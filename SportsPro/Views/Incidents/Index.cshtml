@@ -1,0 +1,73 @@
+﻿@model List<Incident>
+@{
+	ViewData["Title"] = "Sports Pro";
+	Layout = "_Layout";
+}
+
+<div class="container">
+    <div class="text-center mt-4">
+        <h1>Incident Manager</h1>
+    </div>
+
+    
+
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+            <a asp-controller="Incidents" asp-action="Index" asp-route-id="All"
+               class="nav-link @(ViewBag.SelectedFilter == "all" ? "active bg-dark" : "")">
+                All Incidents
+            </a>
+        </li>
+        <li class="nav-item">
+            <a asp-controller="Incidents" asp-action="Index" asp-route-id="Unassigned"
+               class="nav-link @(ViewBag.SelectedFilter == "unassigned" ? "active bg-dark" : "")">
+                Unassigned Incidents
+            </a>
+        </li>
+        <li class="nav-item">
+            <a asp-controller="Incidents" asp-action="Index" asp-route-id="Open"
+               class="nav-link @(ViewBag.SelectedFilter == "open" ? "active bg-dark" : "")">
+                Open Incidents
+            </a>
+        </li>
+    </ul>
+
+    @if (TempData.Keys.Contains("message"))
+    {
+        <div class="alert alert-success mt-4">@TempData["message"]</div>
+    }
+
+    <table class="table table-bordered table-striped mt-4">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Name</th>
+                <th>Product</th>
+                <th>Release Date</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var incident in Model)
+            {
+                <tr>
+                    <td>@incident.Title</td>
+                    <td>@incident.Customer.FullName</td>
+                    <td>@incident.Product.Name</td>
+                    <td>@incident.DateOpened</td>
+                    <td>
+                        <a class="btn btn-primary" asp-controller="Incidents" asp-action="Edit" asp-route-id="@incident.IncidentId">Edit</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" asp-controller="Incidents" asp-action="Delete" asp-route-id="@incident.IncidentId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="text-center my-4">
+        <a asp-controller="Incidents" asp-action="Edit" class="btn btn-primary">Add New Incident</a>
+    </div>
+</div>

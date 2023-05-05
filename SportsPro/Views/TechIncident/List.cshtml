@@ -1,0 +1,55 @@
+﻿@model TechIncidentViewModel
+@{
+	ViewBag.Title = "List Incidents for Technician";
+	Layout = "_Layout";
+}
+
+<div class="container">
+    <div class="row mt-4">
+        <!-- Added margin top -->
+        <div class="col-md-10 col-lg-8 mx-auto">
+            @if (TempData.Keys.Contains("message"))
+            {
+                <h4 class="bg-success p-2">@TempData["message"]</h4>
+            }
+
+            <h1>Technician: @Model.Technician.Name</h1>
+            <h1>Assigned/Open Incidents</h1>
+
+            @if (Model.Incidents.Count() > 0)
+            {
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Title</th>
+                            <th>Customer</th>
+                            <th>Product</th>
+                            <th>Date opened</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var incident in Model.Incidents)
+                        {
+                            <tr>
+                                <td>@incident.Title</td>
+                                <td>@incident.Customer.FullName</td>
+                                <td>@incident.Product.Name</td>
+                                <td>@incident.DateOpened.ToShortDateString()</td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@incident.IncidentId" class="btn btn-primary">Edit</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>The selected technician has no open incidents.</p>
+            }
+
+            <a asp-action="Index" class="btn" style="background-color: #fca311; color: #000;">Switch Technician</a> <!-- Applied the color -->
+        </div>
+    </div>
+</div>

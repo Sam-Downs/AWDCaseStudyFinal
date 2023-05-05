@@ -1,0 +1,56 @@
+﻿@model List<Product>
+@{
+	ViewData["Title"] = "Sports Pro";
+	Layout = "_Layout";
+}
+
+<div class="container">
+    <div class="row mt-4">
+        <!-- Added margin top -->
+        <div class="col-md-10 col-lg-8 mx-auto">
+            
+
+            @if (TempData.Keys.Contains("message"))
+            {
+                <div class="alert alert-success" role="alert">
+                    @TempData["message"]
+                </div>
+            }
+
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Release Date</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model)
+                    {
+                        <tr>
+                            <td>@product.Code</td>
+                            <td>@product.Name</td>
+                            <td>$@product.Price</td>
+                            <td>@product.ReleaseDate</td>
+                            <td>
+                                <a class="btn btn-primary" asp-controller="Products" asp-action="Edit" asp-route-id="@product.ProductId" asp-route-slug="@product.Slug">Edit</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" asp-controller="Products" asp-action="Delete" asp-route-id="@product.ProductId" asp-route-slug="@product.Slug">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <div class="mb-4">
+                <a class="btn btn-primary" asp-controller="Products" asp-action="Add" >Add New Product</a> <!-- Applied the color -->
+            </div>
+
+        </div>
+    </div>
+</div>
